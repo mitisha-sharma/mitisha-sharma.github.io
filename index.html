@@ -1,267 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitisha Sharma | Building What Matters</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts for typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitisha Sharma — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Custom cursor effect -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">M.S.</a>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
+<div class="cursor-dot" id="cursorDot"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="memory-tag">
-                <span class="memory-icon">⌛</span>
-                <span class="memory-text">Preserving what matters</span>
-            </div>
-            <h1 class="hero-title">
-                Mitisha <span class="accent">Sharma</span>
-            </h1>
-            <div class="hero-subtitle">
-                <span class="static-text">I'm a</span>
-                <span class="typing-text"></span>
-            </div>
-            <p class="hero-quote">
-                "In a world where things disappear, I build to remember."
-            </p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn primary">Build with me</a>
-                <a href="#experience" class="btn secondary">See my journey</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll to remember</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+<nav>
+  <div class="logo">mitisha <span class="wave">👋</span></div>
+  <ul class="nav-links">
+    <li><a href="#about" data-hover>about</a></li>
+    <li><a href="#experience" data-hover>work</a></li>
+    <li><a href="#projects" data-hover>projects</a></li>
+    <li><a href="#skills" data-hover>skills</a></li>
+    <li><a href="#contact" data-hover>say hi</a></li>
+  </ul>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="fade-in">I'm Mitisha Sharma, a Computer Science student at VIT Vellore, learning to code in a world that often forgets what matters. Just like in The Memory Police, I believe memory - of people, ideas, and intention - is worth preserving.</p>
-                    <p class="fade-in">Whether I'm designing systems or working with teams, I aim to create things that last technically, but also emotionally. Solutions that don't just work, but mean something.</p>
-                    <p class="fade-in">I'm passionate about working at the intersection of technology, management, and marketing, where strategy meets empathy, and execution meets impact. I want to build things that shift the narrative, challenge the norm, and create space for better.</p>
-                    <p class="fade-in accent-quote">Because even in a world that forgets, I choose to leave behind something worth remembering.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">96.2%</span>
-                        <span class="stat-label">CBSE Score</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">1st</span>
-                        <span class="stat-label">Reverse Coding Champion</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Clubs Managed</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="hero">
+  <svg class="doodle star d1" viewBox="0 0 100 100"><path d="M50 5 L61 38 L96 38 L67 59 L78 92 L50 71 L22 92 L33 59 L4 38 L39 38 Z" fill="none" stroke="var(--pink)" stroke-width="4" stroke-linejoin="round"/></svg>
+  <svg class="doodle squiggle d2" viewBox="0 0 200 40"><path d="M2 20 Q 25 2 50 20 T 100 20 T 150 20 T 198 20" fill="none" stroke="var(--blue)" stroke-width="5" stroke-linecap="round"/></svg>
+  <svg class="doodle scribble d3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="none" stroke="var(--yellow)" stroke-width="5" stroke-dasharray="6 10" stroke-linecap="round"/></svg>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jul 2025 - Oct 2025</div>
-                    <div class="timeline-content">
-                        <h3>Marketing Intern</h3>
-                        <h4>Blinkit</h4>
-                        <ul>
-                            <li>Executed multi-channel campus marketing campaigns engaging 200+ students, increasing brand visibility by 50%</li>
-                            <li>Tracked campaign performance metrics (reach, engagement, participation) to optimize conversion effectiveness</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jul 2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Assistant Area Director - Admin</h3>
-                        <h4>Toastmasters International (VIT)</h4>
-                        <ul>
-                            <li>Directed administrative operations across 10 clubs in Areas B5 and C5</li>
-                            <li>Coordinated 10+ area events, secured sponsorships, trained 20 secretaries, and improved compliance by 15%</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jul 2024 - Jul 2025</div>
-                    <div class="timeline-content">
-                        <h3>Secretary</h3>
-                        <h4>Clima VIT Toastmasters Club</h4>
-                        <ul>
-                            <li>Managed 20+ members and streamlined 150+ records through digital workflows</li>
-                            <li>Boosted operational efficiency by 20% within one month by introducing automated documentation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <p class="tag-badge reveal">⌛ Preserving what matters</p>
+  <h1 class="reveal">Mitisha Sharma<span class="dot-accent">.</span></h1>
+  <p class="hero-quote reveal">"In a world where things disappear, I build to remember."</p>
+  <p class="hero-sub reveal">Final year CS undergrad at VIT Vellore, thinking a lot about what's worth keeping and what's worth building. Part philosopher, part builder, full time trying to make something that actually matters.</p>
+  <a href="#contact" class="btn" data-hover data-magnetic>let's talk</a>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">🤖</div>
-                    <h3>AI Prompt Engineering</h3>
-                    <p class="project-tech">OpenAI API, Python</p>
-                    <p>Engineered advanced prompts to fine-tune AI models, improving solution accuracy by 25%.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">🌐</div>
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-tech">HTML, CSS, JavaScript</p>
-                    <p>Built and deployed a responsive portfolio website using HTML, CSS (Flexbox), and JavaScript.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about">
+  <svg class="doodle arrow d4" viewBox="0 0 120 80"><path d="M5 10 Q 60 -5 100 40" fill="none" stroke="var(--green)" stroke-width="4" stroke-linecap="round"/><path d="M85 30 L100 40 L95 55" fill="none" stroke="var(--green)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <p class="eyebrow reveal">about me</p>
+  <p class="about-text reveal">I'm a final year Computer Science student at VIT Vellore, and honestly, still figuring out exactly what I want to build, but very sure of why. I care about things that outlast a trend: good systems, honest work, ideas that hold up. I spent time as Website Manager at Dentilligence, an oral health tech platform, owning web development and SEO, and before that I ran campus marketing at Blinkit.</p>
+  <p class="about-text reveal">Outside of code, I lead as Assistant Area Director, Admin at Toastmasters International, and I think a lot about impermanence, purpose, and what's actually worth spending a life on. I'm not chasing a title. I'm chasing work that means something.</p>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>AI/Marketing</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">SEO Basics</span>
-                        <span class="skill-tag">Content Strategy</span>
-                        <span class="skill-tag">Cold Outreach</span>
-                        <span class="skill-tag">OpenAI API</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Web</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React (Learning)</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">LaTeX</span>
-                        <span class="skill-tag">Canva</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="experience">
+  <p class="eyebrow reveal">where i've worked</p>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <span class="achievement-icon">🏆</span>
-                    <h3>Reverse Coding Champion</h3>
-                    <p>ACM VIT 2025 • 1st place among 150+ teams</p>
-                </div>
-                <div class="achievement-card">
-                    <span class="achievement-icon">🔧</span>
-                    <h3>Technical Skill Development</h3>
-                    <p>GraVITas 2024 • Git workflows & Fusion 360</p>
-                </div>
-                <div class="achievement-card">
-                    <span class="achievement-icon">🎤</span>
-                    <h3>Division Conferences</h3>
-                    <p>Toastmasters International 2024</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="card reveal" data-tilt>
+    <div class="card-head">
+      <h3>Website Manager</h3>
+      <span class="tag">Dentilligence</span>
+      <span class="date">Mar 2026 to Jun 2026</span>
+    </div>
+    <ul>
+      <li>Analyzed product and user data to identify trends and root causes, turning insights into recommendations for product and business decisions</li>
+      <li>Spearheaded website management and SEO driven research strategy, strengthening visibility, search rankings, and user acquisition</li>
+      <li>Designed the pitch deck (WordPress, Figma) for the London Business School Healthtech Challenge 2026. My team won 🏆</li>
+      <li>Integrated AI based teeth recognition software into the product, contributing to AI driven feature innovation</li>
+    </ul>
+  </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Let's build something worth remembering</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:sharmamitisha2005@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>sharmamitisha2005@gmail.com</span>
-                    </a>
-                    <a href="tel:+916265612346" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 62656 12346</span>
-                    </a>
-                    <a href="https://linkedin.com/in/mitishasharma" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/mitishasharma</span>
-                    </a>
-                    <a href="https://github.com/mitisha-sharma" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <span>github.com/mitisha-sharma</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="card reveal" data-tilt>
+    <div class="card-head">
+      <h3>QA Automation</h3>
+      <span class="tag alt">Freelance Assignment</span>
+      <span class="date">2026</span>
+    </div>
+    <ul>
+      <li>Evaluated system outputs against expected behavior, tracing root causes of failures and building structured reports to support engineering decisions</li>
+    </ul>
+  </div>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Mitisha Sharma — Building what matters, remembering what counts</p>
-        </div>
-    </footer>
+  <div class="card reveal" data-tilt>
+    <div class="card-head">
+      <h3>Marketing Intern</h3>
+      <span class="tag alt">Blinkit</span>
+      <span class="date">Jul 2025 to Oct 2025</span>
+    </div>
+    <ul>
+      <li>Ran multi channel campus campaigns for 200+ students, lifting brand visibility by 50% through data backed targeting</li>
+      <li>Tracked reach and engagement metrics to optimize conversions, generating 10,000+ social media interactions</li>
+    </ul>
+  </div>
 
-    <script src="script.js"></script>
+  <div class="card reveal" data-tilt>
+    <div class="card-head">
+      <h3>Assistant Area Director, Admin</h3>
+      <span class="tag">Toastmasters International</span>
+      <span class="date">Jul 2025 to Jul 2026</span>
+    </div>
+    <ul>
+      <li>Directed operations across 10 clubs, coordinating 10+ events and training 20 secretaries, raising compliance by 15% via stakeholder management</li>
+      <li>Trained the board council twice, lifting adherence by 70%, and managed a full year of reporting to TMI HQ</li>
+    </ul>
+  </div>
+
+  <div class="card reveal" data-tilt>
+    <div class="card-head">
+      <h3>Secretary</h3>
+      <span class="tag alt">Clima VIT Toastmasters Club</span>
+      <span class="date">Jul 2024 to Jul 2025</span>
+    </div>
+    <ul>
+      <li>Managed 20+ members and streamlined 150+ records, lifting team efficiency by 20% via automated workflows and reporting</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <svg class="doodle heart d5" viewBox="0 0 100 90"><path d="M50 85 C 10 55 0 25 25 12 C 40 5 50 20 50 20 C 50 20 60 5 75 12 C 100 25 90 55 50 85 Z" fill="none" stroke="var(--pink)" stroke-width="4" stroke-linejoin="round"/></svg>
+  <p class="eyebrow reveal">stuff i've built</p>
+
+  <div class="proj-grid">
+    <div class="proj-card reveal c1" data-tilt>
+      <span class="proj-num">01</span>
+      <h3>Solara</h3>
+      <p class="tech">React (Vite) · Tailwind CSS · Python</p>
+      <p>A full stack solar panel optimization tool. Upload a photo of a panel and it detects whether it's clean or dirty, and even identifies the type of dirt (dust, bird droppings, etc). Python backend handles the image classification, React and Tailwind power the frontend.</p>
+      <div class="proj-links">
+        <a href="https://mitisha-sharma.github.io/solara/" target="_blank" class="proj-btn" data-hover>visit site</a>
+        <a href="https://github.com/mitisha-sharma/solara" target="_blank" class="proj-btn ghost" data-hover>view repo</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal c2" data-tilt>
+      <span class="proj-num">02</span>
+      <h3>Smart Hostel Complaint System</h3>
+      <p class="tech">React 18 · Vite</p>
+      <p>A hostel complaint platform with three portals: students raise and track complaints, wardens assign and monitor resolution, and maintenance staff update status in real time. Includes an AI chatbot that helps users describe issues and helps admins read complaint trends.</p>
+      <div class="proj-links">
+        <a href="https://github.com/mitisha-sharma/hostel-complaint-system" target="_blank" class="proj-btn ghost" data-hover>view repo</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal c3" data-tilt>
+      <span class="proj-num">03</span>
+      <h3>This Portfolio</h3>
+      <p class="tech">HTML · CSS Flexbox · Vanilla JavaScript</p>
+      <p>The site you're on right now. Designed and deployed fully responsive, no frameworks, no build step, just clean HTML, CSS, and JS, tuned for mobile and desktop alike.</p>
+      <div class="proj-links">
+        <a href="https://mitisha-sharma.dev" target="_blank" class="proj-btn" data-hover>visit site</a>
+        <a href="https://github.com/mitisha-sharma/mitisha-sharma" target="_blank" class="proj-btn ghost" data-hover>view repo</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal c1" data-tilt>
+      <span class="proj-num">04</span>
+      <h3>AI Prompt Engineering & Model Evaluation</h3>
+      <p class="tech">OpenAI API · Python</p>
+      <p>Built and validated prompt based automation strategies, analyzing outputs to identify improvement opportunities and boosting solution accuracy by 25% across competition formats.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <p class="eyebrow reveal">what i work with</p>
+  <div class="skills-grid reveal">
+    <div class="skill-block c1">
+      <h4>programming</h4>
+      <p>Python, C/C++, Java, SQL, RDBMS</p>
+    </div>
+    <div class="skill-block c2">
+      <h4>data & analytics</h4>
+      <p>Data Analysis, Dashboards & Reporting, Predictive Modeling, Data Visualization, Root Cause Analysis</p>
+    </div>
+    <div class="skill-block c3">
+      <h4>ai & automation</h4>
+      <p>AI Driven Automation, Prompt Engineering, Process Optimization, OpenAI API, Machine Learning Concepts</p>
+    </div>
+    <div class="skill-block c4">
+      <h4>product</h4>
+      <p>Product Analysis, Requirements Gathering, Stakeholder Management, Customer Workflow Analysis, Agile/Waterfall</p>
+    </div>
+    <div class="skill-block c1">
+      <h4>web</h4>
+      <p>HTML, CSS, JavaScript, React, WordPress, SEO</p>
+    </div>
+    <div class="skill-block c2">
+      <h4>tools</h4>
+      <p>Git/GitHub, VS Code, PyCharm, Figma, LaTeX, Canva, Microsoft Office</p>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <p class="eyebrow reveal">little wins</p>
+  <div class="card reveal" data-tilt>
+    <h3>Reverse Coding Champion, ACM VIT 🥇</h3>
+    <p>Devised novel prompt strategies for AI model refinement, boosting output precision by 25% and placing first against 150+ competing teams.</p>
+  </div>
+  <div class="card reveal" data-tilt>
+    <h3>Technical Skill Development, GraVITas</h3>
+    <p>Certified in Git version control workflows and Fusion 360 CAD.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <svg class="doodle squiggle d6" viewBox="0 0 200 40"><path d="M2 20 Q 25 38 50 20 T 100 20 T 150 20 T 198 20" fill="none" stroke="var(--green)" stroke-width="5" stroke-linecap="round"/></svg>
+  <p class="eyebrow reveal">let's talk</p>
+  <h2 class="reveal">say hi <span class="dot-accent">:)</span></h2>
+  <div class="contact-links reveal">
+    <a href="mailto:sharmamitisha2005@gmail.com" data-hover data-magnetic>sharmamitisha2005@gmail.com</a>
+    <a href="https://linkedin.com/in/mitishasharma" target="_blank" data-hover data-magnetic>linkedin.com/in/mitishasharma</a>
+    <a href="https://github.com/mitisha-sharma" target="_blank" data-hover data-magnetic>github.com/mitisha-sharma</a>
+    <a href="tel:+916265612346" data-hover data-magnetic>+91 6265612346</a>
+  </div>
+</section>
+
+<footer>
+  <p>made with 🧠 + a thousand memories in, waiting for a hundred thousand more. 2026 Mitisha Sharma</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
