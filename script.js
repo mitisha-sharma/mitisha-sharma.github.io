@@ -1,182 +1,61 @@
-// Typing Animation
-const typingText = document.querySelector('.typing-text');
-const words = ['Developer', 'Designer', 'Marketing Enthusiast', 'Memory Keeper'];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-    }
-    
-    if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        setTimeout(typeEffect, 2000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeEffect, 500);
-    } else {
-        setTimeout(typeEffect, isDeleting ? 50 : 100);
-    }
-}
-
-typeEffect();
-
-// Custom Cursor
-const cursor = document.querySelector('.cursor');
-const follower = document.querySelector('.cursor-follower');
-
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    
-    follower.style.left = e.clientX + 'px';
-    follower.style.top = e.clientY + 'px';
+const dot = document.getElementById('cursorDot');
+window.addEventListener('mousemove', e => {
+  dot.style.left = e.clientX + 'px';
+  dot.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('[data-hover], a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => dot.classList.add('hover'));
+  el.addEventListener('mouseleave', () => dot.classList.remove('hover'));
 });
 
-// Hover effect on links and buttons
-document.querySelectorAll('a, button, .project-card, .skill-tag').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'scale(1.5)';
-        follower.style.transform = 'scale(1.5)';
-        follower.style.borderColor = 'var(--accent)';
-    });
-    
-    el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'scale(1)';
-        follower.style.transform = 'scale(1)';
-        follower.style.borderColor = 'var(--accent)';
-    });
+const colors = ['#ff5d8f','#3a8dff','#ffc233','#20b26c'];
+let last = 0;
+window.addEventListener('mousemove', e => {
+  const now = Date.now();
+  if (now - last < 60) return;
+  last = now;
+  const s = document.createElement('div');
+  s.textContent = '✦';
+  s.style.cssText = `position:fixed;left:${e.clientX}px;top:${e.clientY}px;
+    color:${colors[Math.floor(Math.random()*colors.length)]};font-size:14px;
+    pointer-events:none;z-index:9998;transform:translate(-50%,-50%);
+    transition:opacity .6s, transform .6s cubic-bezier(.34,1.56,.64,1);`;
+  document.body.appendChild(s);
+  requestAnimationFrame(() => {
+    s.style.opacity = '0';
+    s.style.transform = `translate(-50%,-50%) translateY(-24px) scale(1.4)`;
+  });
+  setTimeout(() => s.remove(), 600);
 });
 
-// Scroll Animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            
-            // If it's a timeline item, add staggered animation
-            if (entry.target.classList.contains('timeline-item')) {
-                const items = document.querySelectorAll('.timeline-item');
-                items.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, index * 200);
-                });
-            }
-            
-            // If it's a project card
-            if (entry.target.classList.contains('project-card')) {
-                const cards = document.querySelectorAll('.project-card');
-                cards.forEach((card, index) => {
-                    setTimeout(() => {
-                        card.classList.add('visible');
-                    }, index * 200);
-                });
-            }
-        }
-    });
-}, observerOptions);
-
-// Observe elements
-document.querySelectorAll('.timeline-item, .project-card, .about-text p, .stat-item, .achievement-card, .skill-category').forEach(el => {
-    observer.observe(el);
+document.querySelectorAll('[data-magnetic]').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  });
+  el.addEventListener('mouseleave', () => { el.style.transform = 'translate(0,0)'; });
 });
 
-// Smooth scroll for navigation
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        window.scrollTo({
-            top: targetSection.offsetTop - 80,
-            behavior: 'smooth'
-        });
-    });
+document.querySelectorAll('[data-tilt]').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    el.style.transform = `perspective(600px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) translateY(-6px) scale(1.02)`;
+  });
+  el.addEventListener('mouseleave', () => { el.style.transform = ''; });
 });
 
-// Parallax effect on hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero-content');
-    const speed = 0.5;
-    
-    hero.style.transform = `translateY(${scrolled * speed}px)`;
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+  });
 });
-
-// Memory theme: Add a "memory" effect on scroll
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-    
-    document.querySelectorAll('.timeline-item, .project-card').forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < windowHeight - elementVisible) {
-            el.classList.add('memory-active');
-        }
-    });
-});
-
-// Add "memory" particles on hover (optional effect)
-document.querySelector('.hero-title .accent').addEventListener('mouseenter', (e) => {
-    for (let i = 0; i < 5; i++) {
-        createParticle(e);
-    }
-});
-
-function createParticle(e) {
-    const particle = document.createElement('span');
-    particle.className = 'memory-particle';
-    particle.innerHTML = '✦';
-    particle.style.left = e.clientX + 'px';
-    particle.style.top = e.clientY + 'px';
-    particle.style.position = 'fixed';
-    particle.style.color = 'var(--accent)';
-    particle.style.fontSize = '1rem';
-    particle.style.pointerEvents = 'none';
-    particle.style.zIndex = '1000';
-    particle.style.animation = 'floatUp 1s ease-out forwards';
-    
-    document.body.appendChild(particle);
-    
-    setTimeout(() => {
-        particle.remove();
-    }, 1000);
-}
-
-// Add CSS for particles dynamically
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes floatUp {
-        0% {
-            opacity: 1;
-            transform: translateY(0) rotate(0deg);
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(-100px) rotate(180deg);
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// Mobile menu toggle (if you want to add hamburger menu later)
-// For now, just console log that everything is working
-console.log('Portfolio loaded with memory theme ✦');
