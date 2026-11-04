@@ -1,0 +1,12 @@
+/* ==========================================================================
+   MITISHA'S WORLD  |  css/games.css
+   Styles for the mini games (play.html and the pop-up games in the world).
+   ========================================================================== */
+.game { padding: 56px 0; border-top: 3px solid var(--ink); }
+.game-morse { background: var(--yellow); }
+.game-reverse { background: var(--mint); }
+.game-timeline { background: var(--pink); }
+.game-stars { background: var(--blue); color: #fff; }
+.game-title { font-size: clamp(1.8rem, 4.4vw, 2.8rem); line-height: 1; font-weight: 800; letter-spacing: -.03em; margin: 0 0 10px; }
+.game-blurb { max-width: 60ch; margin: 0 0 24px; }
+.game-tabs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }

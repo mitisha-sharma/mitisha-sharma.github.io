@@ -1,215 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mitisha Sharma — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitisha Sharma | Portfolio</title>
+<meta name="description" content="Mitisha Sharma's portfolio as a tiny playable world.">
+<meta name="theme-color" content="#FFD23F">
+<link rel="canonical" href="https://mitisha-sharma.github.io/index.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Mitisha Sharma | Portfolio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mitisha Sharma | Portfolio">
+<meta property="og:description" content="Mitisha Sharma's portfolio as a tiny playable world.">
+<meta property="og:url" content="https://mitisha-sharma.github.io/index.html">
+<meta property="og:image" content="https://mitisha-sharma.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mitisha's World: a tiny pixel town with a quest board, an arcade and a trophy hall.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mitisha Sharma | Portfolio">
+<meta name="twitter:description" content="Mitisha Sharma's portfolio as a tiny playable world.">
+<meta name="twitter:image" content="https://mitisha-sharma.github.io/assets/og.png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className+=" js";</script>
+<script src="js/config.js" defer></script>
+<script src="js/avatar.js" defer></script>
+<script src="js/common.js" defer></script>
 </head>
 <body>
-
-<div class="cursor-dot" id="cursorDot"></div>
-
-<nav>
-  <div class="logo">mitisha <span class="wave">👋</span></div>
-  <ul class="nav-links">
-    <li><a href="#about" data-hover>about</a></li>
-    <li><a href="#experience" data-hover>work</a></li>
-    <li><a href="#projects" data-hover>projects</a></li>
-    <li><a href="#skills" data-hover>skills</a></li>
-    <li><a href="#contact" data-hover>say hi</a></li>
-  </ul>
-</nav>
-
-<section id="hero">
-  <svg class="doodle star d1" viewBox="0 0 100 100"><path d="M50 5 L61 38 L96 38 L67 59 L78 92 L50 71 L22 92 L33 59 L4 38 L39 38 Z" fill="none" stroke="var(--pink)" stroke-width="4" stroke-linejoin="round"/></svg>
-  <svg class="doodle squiggle d2" viewBox="0 0 200 40"><path d="M2 20 Q 25 2 50 20 T 100 20 T 150 20 T 198 20" fill="none" stroke="var(--blue)" stroke-width="5" stroke-linecap="round"/></svg>
-  <svg class="doodle scribble d3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="none" stroke="var(--yellow)" stroke-width="5" stroke-dasharray="6 10" stroke-linecap="round"/></svg>
-
-  <p class="tag-badge reveal">⌛ Preserving what matters</p>
-  <h1 class="reveal">Mitisha Sharma<span class="dot-accent">.</span></h1>
-  <p class="hero-quote reveal">"In a world where things disappear, I build to remember."</p>
-  <p class="hero-sub reveal">Final year CS undergrad at VIT Vellore, thinking a lot about what's worth keeping and what's worth building. Part philosopher, part builder, full time trying to make something that actually matters.</p>
-  <a href="#contact" class="btn" data-hover data-magnetic>let's talk</a>
-</section>
-
-<section id="about">
-  <svg class="doodle arrow d4" viewBox="0 0 120 80"><path d="M5 10 Q 60 -5 100 40" fill="none" stroke="var(--green)" stroke-width="4" stroke-linecap="round"/><path d="M85 30 L100 40 L95 55" fill="none" stroke="var(--green)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  <p class="eyebrow reveal">about me</p>
-  <p class="about-text reveal">I'm a final year Computer Science student at VIT Vellore, and honestly, still figuring out exactly what I want to build, but very sure of why. I care about things that outlast a trend: good systems, honest work, ideas that hold up. I spent time as Website Manager at Dentilligence, an oral health tech platform, owning web development and SEO, and before that I ran campus marketing at Blinkit.</p>
-  <p class="about-text reveal">Outside of code, I lead as Assistant Area Director, Admin at Toastmasters International, and I think a lot about impermanence, purpose, and what's actually worth spending a life on. I'm not chasing a title. I'm chasing work that means something.</p>
-</section>
-
-<section id="experience">
-  <p class="eyebrow reveal">where i've worked</p>
-
-  <div class="card reveal" data-tilt>
-    <div class="card-head">
-      <h3>Website Manager</h3>
-      <span class="tag">Dentilligence</span>
-      <span class="date">Mar 2026 to Jun 2026</span>
-    </div>
-    <ul>
-      <li>Analyzed product and user data to identify trends and root causes, turning insights into recommendations for product and business decisions</li>
-      <li>Spearheaded website management and SEO driven research strategy, strengthening visibility, search rankings, and user acquisition</li>
-      <li>Designed the pitch deck (WordPress, Figma) for the London Business School Healthtech Challenge 2026. My team won 🏆</li>
-      <li>Integrated AI based teeth recognition software into the product, contributing to AI driven feature innovation</li>
-    </ul>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand face-host" href="index.html" data-face="2" aria-label="Mitisha's World, back to the map">
+    <svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+<circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>
+<g class="face f1"><circle cx="23" cy="26" r="3.6" fill="#17141F"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38c6 8 20 8 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+<g class="face f2"><path d="M17 29q6-9 12 0M35 29q6-9 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M17 37h30q-2 14-15 14t-15-14z" fill="#17141F"/><path d="M25 46q7-5 14 0q-7 6-14 0z" fill="#FF4B3A"/><circle cx="13" cy="37" r="4" fill="#FF8FC0"/><circle cx="51" cy="37" r="4" fill="#FF8FC0"/></g>
+<g class="face f3"><path d="M17 28q6-8 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38q13 7 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M29 41h11v8q-5.5 5-11 0z" fill="#FF8FC0" stroke="#17141F" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="face f4"><path d="M23 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M41 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 38c5 11 23 11 28 0z" fill="#FBF5E6" stroke="#17141F" stroke-width="4" stroke-linejoin="round"/></g>
+<g class="face f5"><circle cx="23" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="24" cy="27" r="2.6" fill="#17141F"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="42" cy="27" r="2.6" fill="#17141F"/><ellipse cx="32" cy="46" rx="6" ry="8" fill="#17141F"/></g>
+<g class="face f6"><path d="M11 22h42v6q0 9-10 9-8 0-10-7h-4q-2 7-10 7-8 0-8-9z" fill="#17141F"/><path d="M21 45q11 6 22-3" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+</svg>
+    <span class="brand-text">Mitisha's World</span>
+  </a>
+  <div class="topbar-actions">
+    
+    <button class="btn btn-sm btn-paper" type="button" data-sound-toggle aria-pressed="false"><span data-sound-label>Sound: off</span></button>
+    <a class="btn btn-sm btn-red skip-game" href="classic.html">Skip the game, show me the normal site</a>
   </div>
-
-  <div class="card reveal" data-tilt>
-    <div class="card-head">
-      <h3>QA Automation</h3>
-      <span class="tag alt">Freelance Assignment</span>
-      <span class="date">2026</span>
-    </div>
-    <ul>
-      <li>Evaluated system outputs against expected behavior, tracing root causes of failures and building structured reports to support engineering decisions</li>
-    </ul>
+  <div class="xp-chip" data-xp-chip title="Your XP in this world. It is saved on this device only.">
+    <span class="pixel xp-lv">LV <b data-xp-lv>1</b></span>
+    <span class="xp-track" role="progressbar" aria-label="Progress to the next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-xp-bar><i class="xp-fill" data-xp-fill></i></span>
+    <span class="pixel xp-text" data-xp-text>0 XP</span>
   </div>
-
-  <div class="card reveal" data-tilt>
-    <div class="card-head">
-      <h3>Marketing Intern</h3>
-      <span class="tag alt">Blinkit</span>
-      <span class="date">Jul 2025 to Oct 2025</span>
-    </div>
-    <ul>
-      <li>Ran multi channel campus campaigns for 200+ students, lifting brand visibility by 50% through data backed targeting</li>
-      <li>Tracked reach and engagement metrics to optimize conversions, generating 10,000+ social media interactions</li>
-    </ul>
+</header>
+<main id="main" class="page">
+<div class="page-wrap"><header class="room-head"><h1 class="big">Mitisha's <span class="squig">World</span></h1></header>
+<ul><li><a href="about.html">Home</a> <span class="small">(About me)</span></li><li><a href="experience.html">Quest board</a> <span class="small">(Experience)</span></li><li><a href="projects.html">Arcade</a> <span class="small">(Projects)</span></li><li><a href="wins.html">Trophy hall</a> <span class="small">(Wins)</span></li><li><a href="skills.html">Skill shop</a> <span class="small">(Skills)</span></li><li><a href="education.html">School</a> <span class="small">(Education)</span></li><li><a href="studio.html">Editing studio</a> <span class="small">(Studio)</span></li><li><a href="play.html">Game corner</a> <span class="small">(Play)</span></li><li><a href="contact.html">Post office</a> <span class="small">(Contact)</span></li></ul></div></main><footer class="site-footer">
+  <div class="footer-top">
+    <span class="face-host footer-face" data-face="2" tabindex="0" role="img" aria-label="A smiley that changes its face when you hover over it"><svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+<circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>
+<g class="face f1"><circle cx="23" cy="26" r="3.6" fill="#17141F"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38c6 8 20 8 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+<g class="face f2"><path d="M17 29q6-9 12 0M35 29q6-9 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M17 37h30q-2 14-15 14t-15-14z" fill="#17141F"/><path d="M25 46q7-5 14 0q-7 6-14 0z" fill="#FF4B3A"/><circle cx="13" cy="37" r="4" fill="#FF8FC0"/><circle cx="51" cy="37" r="4" fill="#FF8FC0"/></g>
+<g class="face f3"><path d="M17 28q6-8 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38q13 7 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M29 41h11v8q-5.5 5-11 0z" fill="#FF8FC0" stroke="#17141F" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="face f4"><path d="M23 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M41 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 38c5 11 23 11 28 0z" fill="#FBF5E6" stroke="#17141F" stroke-width="4" stroke-linejoin="round"/></g>
+<g class="face f5"><circle cx="23" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="24" cy="27" r="2.6" fill="#17141F"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="42" cy="27" r="2.6" fill="#17141F"/><ellipse cx="32" cy="46" rx="6" ry="8" fill="#17141F"/></g>
+<g class="face f6"><path d="M11 22h42v6q0 9-10 9-8 0-10-7h-4q-2 7-10 7-8 0-8-9z" fill="#17141F"/><path d="M21 45q11 6 22-3" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+</svg></span>
+    <nav aria-label="All rooms">
+      <ul class="footer-links">
+        <li><a href="index.html">The world map</a></li>
+        <li><a href="about.html">Home</a></li><li><a href="experience.html">Quest board</a></li><li><a href="projects.html">Arcade</a></li><li><a href="wins.html">Trophy hall</a></li><li><a href="skills.html">Skill shop</a></li><li><a href="education.html">School</a></li><li><a href="studio.html">Editing studio</a></li><li><a href="play.html">Game corner</a></li><li><a href="contact.html">Post office</a></li>
+        <li><a href="classic.html">Normal site</a></li>
+      </ul>
+    </nav>
   </div>
-
-  <div class="card reveal" data-tilt>
-    <div class="card-head">
-      <h3>Assistant Area Director, Admin</h3>
-      <span class="tag">Toastmasters International</span>
-      <span class="date">Jul 2025 to Jul 2026</span>
-    </div>
-    <ul>
-      <li>Directed operations across 10 clubs, coordinating 10+ events and training 20 secretaries, raising compliance by 15% via stakeholder management</li>
-      <li>Trained the board council twice, lifting adherence by 70%, and managed a full year of reporting to TMI HQ</li>
-    </ul>
-  </div>
-
-  <div class="card reveal" data-tilt>
-    <div class="card-head">
-      <h3>Secretary</h3>
-      <span class="tag alt">Clima VIT Toastmasters Club</span>
-      <span class="date">Jul 2024 to Jul 2025</span>
-    </div>
-    <ul>
-      <li>Managed 20+ members and streamlined 150+ records, lifting team efficiency by 20% via automated workflows and reporting</li>
-    </ul>
-  </div>
-</section>
-
-<section id="projects">
-  <svg class="doodle heart d5" viewBox="0 0 100 90"><path d="M50 85 C 10 55 0 25 25 12 C 40 5 50 20 50 20 C 50 20 60 5 75 12 C 100 25 90 55 50 85 Z" fill="none" stroke="var(--pink)" stroke-width="4" stroke-linejoin="round"/></svg>
-  <p class="eyebrow reveal">stuff i've built</p>
-
-  <div class="proj-grid">
-    <div class="proj-card reveal c1" data-tilt>
-      <span class="proj-num">01</span>
-      <h3>Solara</h3>
-      <p class="tech">React (Vite) · Tailwind CSS · Python</p>
-      <p>A full stack solar panel optimization tool. Upload a photo of a panel and it detects whether it's clean or dirty, and even identifies the type of dirt (dust, bird droppings, etc). Python backend handles the image classification, React and Tailwind power the frontend.</p>
-      <div class="proj-links">
-        <a href="https://mitisha-sharma.github.io/solara/" target="_blank" class="proj-btn" data-hover>visit site</a>
-        <a href="https://github.com/mitisha-sharma/solara" target="_blank" class="proj-btn ghost" data-hover>view repo</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal c2" data-tilt>
-      <span class="proj-num">02</span>
-      <h3>Smart Hostel Complaint System</h3>
-      <p class="tech">React 18 · Vite</p>
-      <p>A hostel complaint platform with three portals: students raise and track complaints, wardens assign and monitor resolution, and maintenance staff update status in real time. Includes an AI chatbot that helps users describe issues and helps admins read complaint trends.</p>
-      <div class="proj-links">
-        <a href="https://github.com/mitisha-sharma/hostel-complaint-system" target="_blank" class="proj-btn ghost" data-hover>view repo</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal c3" data-tilt>
-      <span class="proj-num">03</span>
-      <h3>This Portfolio</h3>
-      <p class="tech">HTML · CSS Flexbox · Vanilla JavaScript</p>
-      <p>The site you're on right now. Designed and deployed fully responsive, no frameworks, no build step, just clean HTML, CSS, and JS, tuned for mobile and desktop alike.</p>
-      <div class="proj-links">
-        <a href="https://mitisha-sharma.dev" target="_blank" class="proj-btn" data-hover>visit site</a>
-        <a href="https://github.com/mitisha-sharma/mitisha-sharma" target="_blank" class="proj-btn ghost" data-hover>view repo</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal c1" data-tilt>
-      <span class="proj-num">04</span>
-      <h3>AI Prompt Engineering & Model Evaluation</h3>
-      <p class="tech">OpenAI API · Python</p>
-      <p>Built and validated prompt based automation strategies, analyzing outputs to identify improvement opportunities and boosting solution accuracy by 25% across competition formats.</p>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <p class="eyebrow reveal">what i work with</p>
-  <div class="skills-grid reveal">
-    <div class="skill-block c1">
-      <h4>programming</h4>
-      <p>Python, C/C++, Java, SQL, RDBMS</p>
-    </div>
-    <div class="skill-block c2">
-      <h4>data & analytics</h4>
-      <p>Data Analysis, Dashboards & Reporting, Predictive Modeling, Data Visualization, Root Cause Analysis</p>
-    </div>
-    <div class="skill-block c3">
-      <h4>ai & automation</h4>
-      <p>AI Driven Automation, Prompt Engineering, Process Optimization, OpenAI API, Machine Learning Concepts</p>
-    </div>
-    <div class="skill-block c4">
-      <h4>product</h4>
-      <p>Product Analysis, Requirements Gathering, Stakeholder Management, Customer Workflow Analysis, Agile/Waterfall</p>
-    </div>
-    <div class="skill-block c1">
-      <h4>web</h4>
-      <p>HTML, CSS, JavaScript, React, WordPress, SEO</p>
-    </div>
-    <div class="skill-block c2">
-      <h4>tools</h4>
-      <p>Git/GitHub, VS Code, PyCharm, Figma, LaTeX, Canva, Microsoft Office</p>
-    </div>
-  </div>
-</section>
-
-<section id="achievements">
-  <p class="eyebrow reveal">little wins</p>
-  <div class="card reveal" data-tilt>
-    <h3>Reverse Coding Champion, ACM VIT 🥇</h3>
-    <p>Devised novel prompt strategies for AI model refinement, boosting output precision by 25% and placing first against 150+ competing teams.</p>
-  </div>
-  <div class="card reveal" data-tilt>
-    <h3>Technical Skill Development, GraVITas</h3>
-    <p>Certified in Git version control workflows and Fusion 360 CAD.</p>
-  </div>
-</section>
-
-<section id="contact">
-  <svg class="doodle squiggle d6" viewBox="0 0 200 40"><path d="M2 20 Q 25 38 50 20 T 100 20 T 150 20 T 198 20" fill="none" stroke="var(--green)" stroke-width="5" stroke-linecap="round"/></svg>
-  <p class="eyebrow reveal">let's talk</p>
-  <h2 class="reveal">say hi <span class="dot-accent">:)</span></h2>
-  <div class="contact-links reveal">
-    <a href="mailto:sharmamitisha2005@gmail.com" data-hover data-magnetic>sharmamitisha2005@gmail.com</a>
-    <a href="https://linkedin.com/in/mitishasharma" target="_blank" data-hover data-magnetic>linkedin.com/in/mitishasharma</a>
-    <a href="https://github.com/mitisha-sharma" target="_blank" data-hover data-magnetic>github.com/mitisha-sharma</a>
-    <a href="tel:+916265612346" data-hover data-magnetic>+91 6265612346</a>
-  </div>
-</section>
-
-<footer>
-  <p>made with 🧠 + a thousand memories in, waiting for a hundred thousand more. 2026 Mitisha Sharma</p>
+  <p class="footer-note"><span class="pixel">Made by Mitisha.</span> <span class="hand">Pixels drawn by hand, in code.</span></p>
+  <p class="footer-tiny">Your XP and stars are saved on this device only. <button class="link-btn" type="button" data-reset-progress>Reset my progress</button></p>
 </footer>
-
-<script src="script.js"></script>
+<script src="js/pages.js" defer></script>
 </body>
 </html>

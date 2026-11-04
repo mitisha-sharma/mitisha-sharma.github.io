@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play | Mitisha Sharma | Portfolio</title>
+<meta name="description" content="Four small games from Mitisha Sharma's portfolio: Blink Morse, Reverse Coding, Edit Timeline and a hidden star hunt.">
+<meta name="theme-color" content="#FFD23F">
+<link rel="canonical" href="https://mitisha-sharma.github.io/play.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Mitisha Sharma | Portfolio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Play | Mitisha Sharma | Portfolio">
+<meta property="og:description" content="Four small games from Mitisha Sharma's portfolio: Blink Morse, Reverse Coding, Edit Timeline and a hidden star hunt.">
+<meta property="og:url" content="https://mitisha-sharma.github.io/play.html">
+<meta property="og:image" content="https://mitisha-sharma.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mitisha's World: a tiny pixel town with a quest board, an arcade and a trophy hall.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Play | Mitisha Sharma | Portfolio">
+<meta name="twitter:description" content="Four small games from Mitisha Sharma's portfolio: Blink Morse, Reverse Coding, Edit Timeline and a hidden star hunt.">
+<meta name="twitter:image" content="https://mitisha-sharma.github.io/assets/og.png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/games.css">
+<script>document.documentElement.className+=" js";</script>
+<script src="js/config.js" defer></script>
+<script src="js/avatar.js" defer></script>
+<script src="js/common.js" defer></script>
+<script src="js/games.js" defer></script>
+</head>
+<body class="room-play" data-room="play">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand face-host" href="index.html" data-face="2" aria-label="Mitisha's World, back to the map">
+    <svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+<circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>
+<g class="face f1"><circle cx="23" cy="26" r="3.6" fill="#17141F"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38c6 8 20 8 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+<g class="face f2"><path d="M17 29q6-9 12 0M35 29q6-9 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M17 37h30q-2 14-15 14t-15-14z" fill="#17141F"/><path d="M25 46q7-5 14 0q-7 6-14 0z" fill="#FF4B3A"/><circle cx="13" cy="37" r="4" fill="#FF8FC0"/><circle cx="51" cy="37" r="4" fill="#FF8FC0"/></g>
+<g class="face f3"><path d="M17 28q6-8 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38q13 7 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M29 41h11v8q-5.5 5-11 0z" fill="#FF8FC0" stroke="#17141F" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="face f4"><path d="M23 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M41 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 38c5 11 23 11 28 0z" fill="#FBF5E6" stroke="#17141F" stroke-width="4" stroke-linejoin="round"/></g>
+<g class="face f5"><circle cx="23" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="24" cy="27" r="2.6" fill="#17141F"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="42" cy="27" r="2.6" fill="#17141F"/><ellipse cx="32" cy="46" rx="6" ry="8" fill="#17141F"/></g>
+<g class="face f6"><path d="M11 22h42v6q0 9-10 9-8 0-10-7h-4q-2 7-10 7-8 0-8-9z" fill="#17141F"/><path d="M21 45q11 6 22-3" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+</svg>
+    <span class="brand-text">Mitisha's World</span>
+  </a>
+  <div class="topbar-actions">
+    <a class="btn btn-sm btn-paper" href="index.html"><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg>Back to the world</a>
+    <button class="btn btn-sm btn-paper" type="button" data-sound-toggle aria-pressed="false"><span data-sound-label>Sound: off</span></button>
+    <a class="btn btn-sm btn-red skip-game" href="classic.html">Skip the game, show me the normal site</a>
+  </div>
+  <div class="xp-chip" data-xp-chip title="Your XP in this world. It is saved on this device only.">
+    <span class="pixel xp-lv">LV <b data-xp-lv>1</b></span>
+    <span class="xp-track" role="progressbar" aria-label="Progress to the next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-xp-bar><i class="xp-fill" data-xp-fill></i></span>
+    <span class="pixel xp-text" data-xp-text>0 XP</span>
+  </div>
+</header>
+<main id="main" class="page page-play">
+<div class="page-wrap">
+<header class="room-head">
+  <p class="room-tag pixel">Room 8 / Game corner</p>
+  <h1 class="big">The <span class="squig">game corner</span></h1>
+  <p class="intro">Four little games. Each one comes from something I actually did.</p>
+</header>
+<nav class="game-tabs" aria-label="Pick a game">
+  <a class="btn btn-sm btn-yellow" href="#morse">1. Blink Morse</a>
+  <a class="btn btn-sm btn-mint" href="#reverse">2. Reverse Coding</a>
+  <a class="btn btn-sm btn-pink" href="#timeline">3. Edit Timeline</a>
+  <a class="btn btn-sm btn-blue" href="#stars">4. Hidden stars</a>
+</nav>
+<noscript><p class="note-box">The games need JavaScript. The <a href="classic.html">normal site</a> has all my content without it.</p></noscript>
+</div>
+
+<section id="morse" class="game game-morse" aria-labelledby="h-morse">
+  <div class="game-wrap">
+    <h2 id="h-morse" class="game-title">1. Blink Morse</h2>
+    <p class="game-blurb">My BlinkMorse project is an ESP32 eye-blink Morse communication system. This is a little browser version. Tap or press the eye: a quick blink is a dot, a long blink is a dash. Spell the word.</p>
+    <div class="game-mount" data-game="morse"></div>
+  </div>
+</section>
+
+<section id="reverse" class="game game-reverse" aria-labelledby="h-reverse">
+  <div class="game-wrap">
+    <h2 id="h-reverse" class="game-title">2. Reverse Coding</h2>
+    <p class="game-blurb">I won Reverse Coding Champion at ACM VIT. You get an output. Pick the input or prompt that most likely made it. Five rounds.</p>
+    <div class="game-mount" data-game="reverse"></div>
+  </div>
+</section>
+
+<section id="timeline" class="game game-timeline" aria-labelledby="h-timeline">
+  <div class="game-wrap">
+    <h2 id="h-timeline" class="game-title">3. Edit Timeline</h2>
+    <p class="game-blurb">I love video editing. Here are five clips for a tiny story, all mixed up. Drag them into the right order, then hit play.</p>
+    <div class="game-mount" data-game="timeline"></div>
+  </div>
+</section>
+
+<section id="stars" class="game game-stars" aria-labelledby="h-stars">
+  <div class="game-wrap">
+    <h2 id="h-stars" class="game-title">4. Hidden stars</h2>
+    <p class="game-blurb">Seven stars are hidden around the world map. Find them all and a secret page opens. You walk into a star to collect it.</p>
+    <div class="game-mount" data-game="stars"></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <span class="face-host footer-face" data-face="2" tabindex="0" role="img" aria-label="A smiley that changes its face when you hover over it"><svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+<circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>
+<g class="face f1"><circle cx="23" cy="26" r="3.6" fill="#17141F"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38c6 8 20 8 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+<g class="face f2"><path d="M17 29q6-9 12 0M35 29q6-9 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M17 37h30q-2 14-15 14t-15-14z" fill="#17141F"/><path d="M25 46q7-5 14 0q-7 6-14 0z" fill="#FF4B3A"/><circle cx="13" cy="37" r="4" fill="#FF8FC0"/><circle cx="51" cy="37" r="4" fill="#FF8FC0"/></g>
+<g class="face f3"><path d="M17 28q6-8 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38q13 7 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M29 41h11v8q-5.5 5-11 0z" fill="#FF8FC0" stroke="#17141F" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="face f4"><path d="M23 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M41 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 38c5 11 23 11 28 0z" fill="#FBF5E6" stroke="#17141F" stroke-width="4" stroke-linejoin="round"/></g>
+<g class="face f5"><circle cx="23" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="24" cy="27" r="2.6" fill="#17141F"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="42" cy="27" r="2.6" fill="#17141F"/><ellipse cx="32" cy="46" rx="6" ry="8" fill="#17141F"/></g>
+<g class="face f6"><path d="M11 22h42v6q0 9-10 9-8 0-10-7h-4q-2 7-10 7-8 0-8-9z" fill="#17141F"/><path d="M21 45q11 6 22-3" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+</svg></span>
+    <nav aria-label="All rooms">
+      <ul class="footer-links">
+        <li><a href="index.html">The world map</a></li>
+        <li><a href="about.html">Home</a></li><li><a href="experience.html">Quest board</a></li><li><a href="projects.html">Arcade</a></li><li><a href="wins.html">Trophy hall</a></li><li><a href="skills.html">Skill shop</a></li><li><a href="education.html">School</a></li><li><a href="studio.html">Editing studio</a></li><li><a href="play.html">Game corner</a></li><li><a href="contact.html">Post office</a></li>
+        <li><a href="classic.html">Normal site</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="footer-note"><span class="pixel">Made by Mitisha.</span> <span class="hand">Pixels drawn by hand, in code.</span></p>
+  <p class="footer-tiny">Your XP and stars are saved on this device only. <button class="link-btn" type="button" data-reset-progress>Reset my progress</button></p>
+</footer>
+<script src="js/pages.js" defer></script>
+</body>
+</html>
