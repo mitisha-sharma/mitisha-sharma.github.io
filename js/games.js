@@ -29,7 +29,7 @@
   var COMMIT_MS = 1500;                                // pause this long and the letter is read
 
   function codeEl(code) {
-    var s = el('span', 'code');
+    var s = el('span', 'code'); s.setAttribute('role', 'img');
     s.setAttribute('aria-label', code.split('').map(function (c) { return c === '.' ? 'dot' : 'dash'; }).join(' '));
     code.split('').forEach(function (c) { var i = el('i', c === '.' ? 'd' : 'l'); i.setAttribute('aria-hidden', 'true'); s.appendChild(i); });
     return s;
