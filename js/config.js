@@ -83,8 +83,8 @@ MW.config = {
     { id: 's1', x: 1.5,  y: 5.5,  clue: 'Behind my house, where the garden meets the trees.' },
     { id: 's2', x: 19.0, y: 1.5,  clue: 'Along the top edge, above the arcade roof.' },
     { id: 's3', x: 34.0, y: 11.0, clue: 'On the far east path, tucked beside the hedge.' },
-    { id: 's4', x: 7.5,  y: 21.0, clue: 'Between the school and the studio, in the flower patch.' },
-    { id: 's5', x: 12.5, y: 24.5, clue: 'Where the pond meets the grass.' },
+    { id: 's4', x: 8.5,  y: 19.0, clue: 'In the flower patch just east of the school door.' },
+    { id: 's5', x: 10.5, y: 24.5, clue: 'On the path beside the pond, on its west bank.' },
     { id: 's6', x: 14.0, y: 19.0, clue: 'In the town square, close to the lamp post.' },
     { id: 's7', x: 33.5, y: 28.0, clue: 'The very bottom right corner of the map.' }
   ]

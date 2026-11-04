@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mitisha Sharma | Portfolio</title>
-<meta name="description" content="Mitisha Sharma's portfolio as a tiny playable world.">
+<meta name="description" content="Mitisha's World is the portfolio of Mitisha Sharma, a final-year B.Tech CSE student at VIT Vellore, as a small playable pixel town. Walk in, or skip to the normal site.">
 <meta name="theme-color" content="#FFD23F">
 <link rel="canonical" href="https://mitisha-sharma.github.io/index.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Mitisha Sharma | Portfolio">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mitisha Sharma | Portfolio">
-<meta property="og:description" content="Mitisha Sharma's portfolio as a tiny playable world.">
+<meta property="og:description" content="Mitisha's World is the portfolio of Mitisha Sharma, a final-year B.Tech CSE student at VIT Vellore, as a small playable pixel town. Walk in, or skip to the normal site.">
 <meta property="og:url" content="https://mitisha-sharma.github.io/index.html">
 <meta property="og:image" content="https://mitisha-sharma.github.io/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -20,16 +20,21 @@
 <meta property="og:image:alt" content="Mitisha's World: a tiny pixel town with a quest board, an arcade and a trophy hall.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mitisha Sharma | Portfolio">
-<meta name="twitter:description" content="Mitisha Sharma's portfolio as a tiny playable world.">
+<meta name="twitter:description" content="Mitisha's World is the portfolio of Mitisha Sharma, a final-year B.Tech CSE student at VIT Vellore, as a small playable pixel town. Walk in, or skip to the normal site.">
 <meta name="twitter:image" content="https://mitisha-sharma.github.io/assets/og.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/world.css">
+<link rel="stylesheet" href="css/games.css">
 <script>document.documentElement.className+=" js";</script>
 <script src="js/config.js" defer></script>
 <script src="js/avatar.js" defer></script>
 <script src="js/common.js" defer></script>
+<script src="js/art.js" defer></script>
+<script src="js/games.js" defer></script>
+<script src="js/world.js" defer></script>
 </head>
-<body>
+<body class="world-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <a class="brand face-host" href="index.html" data-face="2" aria-label="Mitisha's World, back to the map">
@@ -55,9 +60,52 @@
     <span class="pixel xp-text" data-xp-text>0 XP</span>
   </div>
 </header>
-<main id="main" class="page">
-<div class="page-wrap"><header class="room-head"><h1 class="big">Mitisha's <span class="squig">World</span></h1></header>
-<ul><li><a href="about.html">Home</a> <span class="small">(About me)</span></li><li><a href="experience.html">Quest board</a> <span class="small">(Experience)</span></li><li><a href="projects.html">Arcade</a> <span class="small">(Projects)</span></li><li><a href="wins.html">Trophy hall</a> <span class="small">(Wins)</span></li><li><a href="skills.html">Skill shop</a> <span class="small">(Skills)</span></li><li><a href="education.html">School</a> <span class="small">(Education)</span></li><li><a href="studio.html">Editing studio</a> <span class="small">(Studio)</span></li><li><a href="play.html">Game corner</a> <span class="small">(Play)</span></li><li><a href="contact.html">Post office</a> <span class="small">(Contact)</span></li></ul></div></main><footer class="site-footer">
+<main id="main">
+<section class="world" aria-labelledby="world-title">
+  <h1 id="world-title" class="sr-only">Mitisha's World: a small playable town that holds my portfolio</h1>
+  <div class="stage" id="stage">
+    <canvas id="world" tabindex="0" role="img" aria-label="Mitisha's World, a small top-down pixel town. Walk with the arrow keys or W A S D, or drag on a touch screen. Each building is a section of the portfolio. The same content is available as plain links below the map."></canvas>
+    <div class="hud hud-top">
+      <div class="hud-chip pixel" title="Your XP in this world. Saved on this device only.">LV <b data-xp-lv>1</b>
+        <span class="xp-track" role="progressbar" aria-label="Progress to the next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-xp-bar><i class="xp-fill" data-xp-fill></i></span>
+        <span data-xp-text>0 XP</span></div>
+      <div class="hud-chip pixel" title="Hidden stars found"><svg class="hud-star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2l3 7 7.5.7-5.7 5 1.8 7.4L12 18l-6.6 4.1 1.8-7.4-5.7-5L9 9z" fill="#FFD23F" stroke="#17141F" stroke-width="2.4" stroke-linejoin="round"/></svg><span><b data-star-count>0</b> / 7</span></div>
+      <span class="hud-spacer"></span>
+      <button class="btn btn-sm btn-pink" type="button" id="btn-sheet" title="Character sheet (C)"><span class="hide-s">Character sheet</span><span class="show-s">Sheet</span></button>
+      <button class="btn btn-sm btn-mint" type="button" id="btn-help" title="How to play (H)"><span class="hide-s">How to play</span><span class="show-s">Help</span></button>
+      <a class="btn btn-sm btn-paper" href="#places"><span class="hide-s">Plain links</span><span class="show-s">Links</span></a>
+    </div>
+    <div class="hud hud-bottom"><button class="btn prompt" type="button" id="prompt" hidden><span class="key">Enter</span> <span id="prompt-text"></span></button></div>
+    <div class="stick" id="stick" hidden><i></i></div>
+    <div class="iris" id="iris" aria-hidden="true"></div>
+    <p class="sr-only" id="live" role="status" aria-live="polite"></p>
+    <div class="loading" id="loading">Loading the world...</div>
+    <noscript><p class="note-box" style="position:absolute;inset:20px;z-index:30">The playable map needs JavaScript. Use the links below, or the <a href="classic.html">normal site</a>.</p></noscript>
+  </div>
+  <p class="controls-hint"><b>Walk:</b> arrow keys or WASD, or drag. <b>Go in:</b> Enter at a door, or tap a building. <b>Find:</b> 7 hidden stars.</p>
+</section>
+
+<section class="below" aria-labelledby="places">
+  <div class="page-wrap">
+    <p class="room-tag pixel">Not into games?</p>
+    <h2 id="places">Every place on the map, as plain links</h2>
+    <p class="intro">Mitisha's World is the portfolio of Mitisha Sharma, a final-year B.Tech CSE student at VIT Vellore. Every building in the town is a section. The normal site has the same content on one clean page.</p>
+    <ul class="place-list">
+<li><a href="about.html">About me</a><span class="where">Home</span><p>Who I am and where I am from.</p></li>
+<li><a href="experience.html">Experience</a><span class="where">Quest board</span><p>Four roles, shown as a quest log with levels.</p></li>
+<li><a href="projects.html">Projects</a><span class="where">Arcade</span><p>Four projects, one arcade cabinet each.</p></li>
+<li><a href="wins.html">Wins</a><span class="where">Trophy hall</span><p>Things I won and badges I earned.</p></li>
+<li><a href="skills.html">Skills</a><span class="where">Skill shop</span><p>My skills as stickers you can collect.</p></li>
+<li><a href="education.html">Education</a><span class="where">School</span><p>VIT Vellore, B.Tech CSE.</p></li>
+<li><a href="studio.html">Studio</a><span class="where">Editing studio</span><p>A corner for my video edits and reels.</p></li>
+<li><a href="play.html">Play</a><span class="where">Game corner</span><p>Four little games based on things I did.</p></li>
+<li><a href="contact.html">Contact</a><span class="where">Post office</span><p>Email, LinkedIn, GitHub, Instagram and my resume.</p></li>
+    </ul>
+    <p class="actions"><a class="btn btn-red" href="classic.html">Skip the game, show me the normal site</a></p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
   <div class="footer-top">
     <span class="face-host footer-face" data-face="2" tabindex="0" role="img" aria-label="A smiley that changes its face when you hover over it"><svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
 <circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>

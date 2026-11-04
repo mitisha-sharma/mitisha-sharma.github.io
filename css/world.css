@@ -1,0 +1,74 @@
+/* ==========================================================================
+   MITISHA'S WORLD  |  css/world.css
+   Only used by index.html (the playable map). Needs css/style.css too.
+   ========================================================================== */
+.world-page .topbar .xp-chip { display: none; }
+
+.stage {
+  position: relative; overflow: hidden; background: var(--ink); border-bottom: 3px solid var(--ink);
+  height: calc(100vh - var(--topbar-h, 74px)); height: calc(100dvh - var(--topbar-h, 74px)); min-height: 440px;
+}
+.stage canvas { display: block; width: 100%; height: 100%; touch-action: none; image-rendering: pixelated; image-rendering: crisp-edges; cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
+.stage canvas:focus-visible { box-shadow: inset 0 0 0 4px var(--yellow); border-radius: 0; }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; background: var(--ink); color: var(--yellow); font: 600 1.4rem var(--pixel); z-index: 10; }
+.loading[hidden] { display: none; }
+
+.hud { position: absolute; left: 0; right: 0; display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; pointer-events: none; z-index: 5; }
+.hud > * { pointer-events: auto; }
+.hud-top { top: 0; align-items: center; }
+.hud-bottom { bottom: 0; justify-content: center; padding-bottom: 18px; }
+.hud-chip { display: flex; align-items: center; gap: 8px; background: var(--paper); border: 3px solid var(--ink); border-radius: 999px; padding: 4px 13px; box-shadow: 3px 3px 0 var(--ink); font-size: .95rem; min-height: 42px; }
+.hud-chip b { color: var(--red); }
+.hud-star { width: 18px; height: 18px; flex: none; }
+.hud-spacer { flex: 1; }
+
+.prompt { max-width: calc(100% - 20px); font-size: 1.2rem; padding: .75em 1.3em; background: var(--yellow); }
+.prompt[hidden] { display: none; }
+.prompt .key { background: var(--ink); color: var(--yellow); padding: 0 .5em; border-radius: 4px; margin-right: .2em; }
+.prompt:not(:hover) { animation: prompt-pop .5s steps(3) 1; }
+@keyframes prompt-pop { from { transform: translateY(12px); opacity: 0; } }
+
+.stick { position: absolute; width: 96px; height: 96px; margin: -48px 0 0 -48px; border-radius: 50%; border: 3px solid rgba(251, 245, 230, .85); background: rgba(23, 20, 31, .28); pointer-events: none; z-index: 6; }
+.stick[hidden] { display: none; }
+.stick i { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 50%; background: var(--yellow); border: 3px solid var(--ink); }
+
+.iris { position: absolute; inset: 0; z-index: 20; background: var(--yellow); pointer-events: none; clip-path: circle(0 at var(--ix, 50%) var(--iy, 50%)); transition: clip-path .5s ease-in; }
+.iris.on { clip-path: circle(150% at var(--ix, 50%) var(--iy, 50%)); }
+
+.controls-hint { margin: 0; padding: 10px var(--gutter); background: var(--ink); color: var(--paper); font: 500 .95rem var(--pixel); text-align: center; }
+.controls-hint b { color: var(--yellow); }
+
+/* below the game: plain links */
+.below { padding: 64px 0 80px; background: var(--paper); }
+.below h2 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1; font-weight: 800; letter-spacing: -.03em; margin: 0 0 14px; }
+.below .intro { max-width: 52ch; margin-top: 12px; }
+.place-list { list-style: none; margin: 34px 0 0; padding: 0; columns: 2 320px; column-gap: 38px; }
+.place-list li { break-inside: avoid; margin: 0 0 18px; padding: 4px 0 4px 16px; border-left: 6px solid var(--ink); }
+.place-list li:nth-child(5n+1) { border-left-color: var(--red); } .place-list li:nth-child(5n+2) { border-left-color: var(--blue); }
+.place-list li:nth-child(5n+3) { border-left-color: var(--mint); } .place-list li:nth-child(5n+4) { border-left-color: var(--pink); } .place-list li:nth-child(5n) { border-left-color: var(--yellow); }
+.place-list a { font-weight: 800; font-size: 1.25rem; letter-spacing: -.015em; }
+.place-list .where { font-family: var(--pixel); font-size: .88rem; opacity: .8; margin-left: .4em; }
+.place-list p { margin: 2px 0 0; }
+
+.show-s { display: none; }
+
+/* dialogs used by the world */
+.modal .sheet { transform: none; box-shadow: none; border: 0; background: var(--pink); margin: -18px; padding: 22px 18px; }
+.help-list { margin: 0 0 16px; padding-left: 1.2em; display: grid; gap: 8px; }
+.clues { background: var(--yellow); border: var(--line); padding: 10px 14px; }
+.clues summary { cursor: pointer; font-size: 1.05rem; }
+.clues ol { margin: 10px 0 0; padding-left: 1.3em; }
+.clues li.found { text-decoration: line-through; opacity: .6; }
+
+@media (max-width: 760px) {
+  .hide-s { display: none; } .show-s { display: inline; }
+  .world-page .topbar { padding-bottom: 8px; }
+  .world-page .topbar-actions { flex-wrap: nowrap; }
+  .world-page .topbar-actions .skip-game { flex: 1 1 0; font-size: .85rem; line-height: 1.15; }
+  .hud { padding: 8px; gap: 6px; }
+  .hud-chip { padding: 2px 10px; min-height: 38px; font-size: .88rem; }
+  .hud .btn-sm { min-height: 38px; padding: .35em .65em; font-size: .88rem; }
+  .prompt { font-size: 1.05rem; }
+  .hud-bottom { padding-bottom: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .iris { transition: none; } .prompt:not(:hover) { animation: none; } }
