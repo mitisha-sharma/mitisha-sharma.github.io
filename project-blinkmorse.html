@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlinkMorse | Mitisha Sharma | Portfolio</title>
+<meta name="description" content="BlinkMorse: An ESP32 eye-blink Morse communication system, built as a course project.">
+<meta name="theme-color" content="#FFD23F">
+<link rel="canonical" href="https://mitisha-sharma.github.io/project-blinkmorse.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Mitisha Sharma | Portfolio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BlinkMorse | Mitisha Sharma | Portfolio">
+<meta property="og:description" content="BlinkMorse: An ESP32 eye-blink Morse communication system, built as a course project.">
+<meta property="og:url" content="https://mitisha-sharma.github.io/project-blinkmorse.html">
+<meta property="og:image" content="https://mitisha-sharma.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mitisha's World: a tiny pixel town with a quest board, an arcade and a trophy hall.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BlinkMorse | Mitisha Sharma | Portfolio">
+<meta name="twitter:description" content="BlinkMorse: An ESP32 eye-blink Morse communication system, built as a course project.">
+<meta name="twitter:image" content="https://mitisha-sharma.github.io/assets/og.png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className+=" js";</script>
+<script src="js/config.js" defer></script>
+<script src="js/avatar.js" defer></script>
+<script src="js/common.js" defer></script>
+</head>
+<body class="room-project">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand face-host" href="index.html" data-face="2" aria-label="Mitisha's World, back to the map">
+    <svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+<circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>
+<g class="face f1"><circle cx="23" cy="26" r="3.6" fill="#17141F"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38c6 8 20 8 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+<g class="face f2"><path d="M17 29q6-9 12 0M35 29q6-9 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M17 37h30q-2 14-15 14t-15-14z" fill="#17141F"/><path d="M25 46q7-5 14 0q-7 6-14 0z" fill="#FF4B3A"/><circle cx="13" cy="37" r="4" fill="#FF8FC0"/><circle cx="51" cy="37" r="4" fill="#FF8FC0"/></g>
+<g class="face f3"><path d="M17 28q6-8 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38q13 7 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M29 41h11v8q-5.5 5-11 0z" fill="#FF8FC0" stroke="#17141F" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="face f4"><path d="M23 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M41 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 38c5 11 23 11 28 0z" fill="#FBF5E6" stroke="#17141F" stroke-width="4" stroke-linejoin="round"/></g>
+<g class="face f5"><circle cx="23" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="24" cy="27" r="2.6" fill="#17141F"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="42" cy="27" r="2.6" fill="#17141F"/><ellipse cx="32" cy="46" rx="6" ry="8" fill="#17141F"/></g>
+<g class="face f6"><path d="M11 22h42v6q0 9-10 9-8 0-10-7h-4q-2 7-10 7-8 0-8-9z" fill="#17141F"/><path d="M21 45q11 6 22-3" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+</svg>
+    <span class="brand-text">Mitisha's World</span>
+  </a>
+  <div class="topbar-actions">
+    <a class="btn btn-sm btn-paper" href="index.html"><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg>Back to the world</a>
+    <button class="btn btn-sm btn-paper" type="button" data-sound-toggle aria-pressed="false"><span data-sound-label>Sound: off</span></button>
+    <a class="btn btn-sm btn-red skip-game" href="classic.html">Skip the game, show me the normal site</a>
+  </div>
+  <div class="xp-chip" data-xp-chip title="Your XP in this world. It is saved on this device only.">
+    <span class="pixel xp-lv">LV <b data-xp-lv>1</b></span>
+    <span class="xp-track" role="progressbar" aria-label="Progress to the next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-xp-bar><i class="xp-fill" data-xp-fill></i></span>
+    <span class="pixel xp-text" data-xp-text>0 XP</span>
+  </div>
+</header>
+<main id="main" class="page page-project proj-blinkmorse">
+<p class="crumbs"><a href="projects.html">The arcade</a> / BlinkMorse</p>
+<div class="proj-layout">
+  <div class="proj-screen cab-blue">
+    <div class="cab-marquee"><span class="pixel">Now playing</span></div>
+    <div class="cab-screen"><svg class="screen-art" viewBox="0 0 160 120" role="img" aria-label="A big open eye above a row of Morse dots and dashes">
+<rect width="160" height="120" fill="#0F0D16"/>
+<path d="M12 54Q80 2 148 54Q80 106 12 54z" fill="#FBF5E6"/>
+<circle cx="80" cy="54" r="23" fill="#2B50E8"/><circle cx="80" cy="54" r="10" fill="#0F0D16"/><circle cx="72" cy="46" r="4.5" fill="#fff"/>
+<path d="M12 54Q80 2 148 54" fill="none" stroke="#FFD23F" stroke-width="3"/>
+<g fill="#FFD23F"><circle cx="30" cy="106" r="5"/><rect x="44" y="101" width="22" height="10" rx="5"/><circle cx="80" cy="106" r="5"/><rect x="94" y="101" width="22" height="10" rx="5"/><circle cx="130" cy="106" r="5"/></g>
+</svg></div>
+  </div>
+  <div class="proj-copy">
+    <h1 class="big">BlinkMorse</h1>
+    <p class="lead">An ESP32 eye-blink Morse communication system, built as a course project.</p>
+    <ul class="facts"><li><b class="pixel">ESP32</b><span>the board it runs on</span></li><li><b class="pixel">1</b><span>course project</span></li></ul>
+    <!-- EDIT: add a link button here, for example: <a class="btn btn-blue" href="https://..." target="_blank" rel="noopener noreferrer">Open it</a> -->
+    <figure class="media-slot">
+      <!-- EDIT: put a photo or video of BlinkMorse here.
+           Photo:  <img src="assets/blinkmorse.jpg" alt="Describe the photo">
+           Video:  <video controls src="assets/blinkmorse.mp4"></video>
+           Or an embed: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="BlinkMorse demo" allowfullscreen></iframe>
+           Then delete the placeholder div below. -->
+      <div class="media-empty"><span class="pixel">REC</span><span>Photo or video of the build is coming soon.</span></div>
+      <figcaption class="small">A spot reserved for BlinkMorse photos and video.</figcaption>
+    </figure>
+    <p class="actions"><a class="btn btn-mint" href="play.html#morse">Try a Blink Morse game in your browser</a></p>
+  </div>
+</div>
+<nav class="proj-next" aria-label="More projects">
+  <a class="btn btn-sm btn-paper" href="project-vcap.html"><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg>VCAP Research Program</a>
+  <a class="btn btn-sm btn-paper" href="projects.html">Back to the arcade</a>
+  <a class="btn btn-sm btn-paper" href="project-mendia.html">Mendia Hospital Chatbot<svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M6 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg></a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <span class="face-host footer-face" data-face="2" tabindex="0" role="img" aria-label="A smiley that changes its face when you hover over it"><svg class="smiley " viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+<circle cx="32" cy="32" r="28" fill="#FFD23F" stroke="#17141F" stroke-width="4"/>
+<g class="face f1"><circle cx="23" cy="26" r="3.6" fill="#17141F"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38c6 8 20 8 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+<g class="face f2"><path d="M17 29q6-9 12 0M35 29q6-9 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M17 37h30q-2 14-15 14t-15-14z" fill="#17141F"/><path d="M25 46q7-5 14 0q-7 6-14 0z" fill="#FF4B3A"/><circle cx="13" cy="37" r="4" fill="#FF8FC0"/><circle cx="51" cy="37" r="4" fill="#FF8FC0"/></g>
+<g class="face f3"><path d="M17 28q6-8 12 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="26" r="3.6" fill="#17141F"/><path d="M19 38q13 7 26 0" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/><path d="M29 41h11v8q-5.5 5-11 0z" fill="#FF8FC0" stroke="#17141F" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="face f4"><path d="M23 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M41 18l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6-5-2.8-5 2.8 1.2-5.6-4.2-3.8 5.6-.6z" fill="#FF4B3A" stroke="#17141F" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 38c5 11 23 11 28 0z" fill="#FBF5E6" stroke="#17141F" stroke-width="4" stroke-linejoin="round"/></g>
+<g class="face f5"><circle cx="23" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="24" cy="27" r="2.6" fill="#17141F"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#17141F" stroke-width="3"/><circle cx="42" cy="27" r="2.6" fill="#17141F"/><ellipse cx="32" cy="46" rx="6" ry="8" fill="#17141F"/></g>
+<g class="face f6"><path d="M11 22h42v6q0 9-10 9-8 0-10-7h-4q-2 7-10 7-8 0-8-9z" fill="#17141F"/><path d="M21 45q11 6 22-3" fill="none" stroke="#17141F" stroke-width="4" stroke-linecap="round"/></g>
+</svg></span>
+    <nav aria-label="All rooms">
+      <ul class="footer-links">
+        <li><a href="index.html">The world map</a></li>
+        <li><a href="about.html">Home</a></li><li><a href="experience.html">Quest board</a></li><li><a href="projects.html">Arcade</a></li><li><a href="wins.html">Trophy hall</a></li><li><a href="skills.html">Skill shop</a></li><li><a href="education.html">School</a></li><li><a href="studio.html">Editing studio</a></li><li><a href="play.html">Game corner</a></li><li><a href="contact.html">Post office</a></li>
+        <li><a href="classic.html">Normal site</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="footer-note"><span class="pixel">Made by Mitisha.</span> <span class="hand">Pixels drawn by hand, in code.</span></p>
+  <p class="footer-tiny">Your XP and stars are saved on this device only. <button class="link-btn" type="button" data-reset-progress>Reset my progress</button></p>
+</footer>
+<script src="js/pages.js" defer></script>
+</body>
+</html>
